@@ -5,8 +5,14 @@ import java.awt.Font;
 
 import javax.swing.JTextField;
 
+/**
+ * Superclass for all TextFields in this project
+ */
 public class ATextField extends JTextField {
 
+	/**
+	 * Constructs a TextF´field and set appearance for it
+	 */
 	public ATextField() {
 		super();
 		

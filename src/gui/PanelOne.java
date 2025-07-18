@@ -9,11 +9,18 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * The first panel, which is corresponded to tab one
+ */
 public class PanelOne extends JPanel implements ActionListener, GuiConstants {
 
 	ATextField textField;
 	JLabel messageLabel;
 
+	/**
+	 * Constructs an instance of the class.<br>
+	 * Calls the method init() to initialize the nested components.
+	 */
 	public PanelOne() {
 		super();
 		setBackground(Color.ORANGE);
@@ -22,6 +29,9 @@ public class PanelOne extends JPanel implements ActionListener, GuiConstants {
 		init();
 	}
 
+	/**
+	 * Initializes all components, whose parent this panel is.
+	 */
 	private void init() {
 
 		JLabel label = new JLabel(LABEL_TITLE);
@@ -38,6 +48,7 @@ public class PanelOne extends JPanel implements ActionListener, GuiConstants {
 		add(button);
 		button.addActionListener(this);
 
+		// TODO Strings -> constants
 		JButton resetButton = new JButton("reset");
 		resetButton.setActionCommand("Command2");
 		resetButton.addActionListener(this);
@@ -50,8 +61,7 @@ public class PanelOne extends JPanel implements ActionListener, GuiConstants {
 
 		if (e.getActionCommand().equals(COMMAND_CLICK)) {
 			messageLabel.setText(textField.getText());
-		}
-		else if (e.getActionCommand().equals("Command2")){
+		} else if (e.getActionCommand().equals("Command2")) {
 			messageLabel.setText(null);
 			textField.setText(null);
 		}
